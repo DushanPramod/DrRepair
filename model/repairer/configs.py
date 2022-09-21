@@ -14,7 +14,7 @@ def load_config(filename):
             return json.load(fin)
     elif filename.endswith('.yaml') or filename.endswith('.yml'):
         with open(filename) as fin:
-            return yaml.load(fin)
+            return yaml.full_load(fin)
     else:
         raise ValueError('Unknown file type: {}'.format(filename))
 
