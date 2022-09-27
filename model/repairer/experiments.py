@@ -244,4 +244,4 @@ class Experiment(object):
     def serve(self, port):
         from repairer.server import start_server
         self.model.eval()
-        start_server(self, host="0.0.0.0", port=port)
+        start_server(self, host="127.0.0.1", port=port)
